@@ -6,9 +6,122 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="style.css" />
-    <script src="index.mjs"></script>
+    <script type="module" src="./index.mjs" defer></script>
   </head>
   <body>
-      
+    <header>
+      <img
+        src="./assets/images/Asset 1@3x 1.svg"
+        alt="logo"
+        class="header-logo"
+      />
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#" class="black-link">БАНК</a></li>
+          <li><a href="#">БИЗНЕС</a></li>
+          <li><a href="#">ИНВЕСТИЦИИ</a></li>
+          <li><a href="#">СТРАХОВАНИЕ</a></li>
+          <li><a href="#">МОБАЙЛ</a></li>
+          <li><a href="#">ПУТЕШЕСТВИЯ</a></li>
+          <li><a href="#">РАЗВЛЕЧЕНИЯ</a></li>
+        </ul>
+      </nav>
+      <a href="#" class="header-sign"
+        ><button class="button-sign">ВОЙТИ</button></a
+      >
+    </header>
+    <div class="container">
+      <div class="main-text">
+        <h1 class="app-text">Конвертер валют онлайн</h1>
+      </div>
+      <div class="content-box">
+        <div class="content first-content">
+          <div class="text-item"><p class="content-text">У меня есть</p></div>
+          <div class="radio" id="buttonFrom">
+            <input
+              class="input-radio"
+              type="radio"
+              name="first-radio"
+              id="first-radio1"
+              checked
+            />
+            <label class="input-label" for="first-radio1">RUB</label>
+            <input
+              class="input-radio"
+              type="radio"
+              name="first-radio"
+              id="first-radio2"
+            />
+            <label class="input-label" for="first-radio2">USD</label>
+            <input
+              class="input-radio"
+              type="radio"
+              name="first-radio"
+              id="first-radio3"
+            />
+            <label class="input-label" for="first-radio3">EUR</label>
+            <input
+              class="input-radio"
+              type="radio"
+              name="first-radio"
+              id="first-radio4"
+            />
+            <label class="input-label" for="first-radio4">GBP</label>
+          </div>
+          <div class="converter">
+            <div class="converter-input">
+              <input class="input-text" id="inputFrom" type="number" />
+            </div>
+            <div>
+              <p class="converter-text" id="rateFrom"></p>
+            </div>
+          </div>
+        </div>
+        <div class="content second-contend">
+          <div class="text-item">
+            <p class="content-text">Хочу приобрести</p>
+          </div>
+          <div class="radio" id="buttonIn">
+            <input
+              class="input-radio"
+              type="radio"
+              name="second-radio"
+              id="second-radio1"
+            />
+            <label class="input-label" for="second-radio1">RUB</label>
+            <input
+              class="input-radio"
+              type="radio"
+              name="second-radio"
+              id="second-radio2"
+              checked
+            />
+            <label class="input-label" for="second-radio2">USD</label>
+            <input
+              class="input-radio"
+              type="radio"
+              name="second-radio"
+              id="second-radio3"
+            />
+            <label class="input-label" for="second-radio3">EUR</label>
+            <input
+              class="input-radio"
+              type="radio"
+              name="second-radio"
+              id="second-radio4"
+            />
+            <label class="input-label" for="second-radio4">GBP</label>
+          </div>
+          <div class="converter">
+            <div class="converter-input">
+              <input class="input-text" id="inputIn" type="number" />
+            </div>
+            <div>
+              <p class="converter-text" id="rateIn"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
