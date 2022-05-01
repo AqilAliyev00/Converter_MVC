@@ -1,3 +1,6 @@
 export default class Model {
-  constructor() {}
+  constructor() {
+    this.leftValie = "RUB";
+    this.rightValue = "USD";
+  }
 }
