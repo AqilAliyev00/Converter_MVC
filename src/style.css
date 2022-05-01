@@ -68,6 +68,13 @@ select {
   font: inherit;
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  /* display: none; <- Crashes Chrome on hover */
+  -webkit-appearance: none;
+  margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -229,6 +236,7 @@ header {
   font-size: 36px;
   line-height: 42px;
   outline: none;
+  border: 0;
 }
 
 .converter-text {
@@ -238,4 +246,19 @@ header {
   color: #c6c6c6;
   margin: 15px;
   margin-top: 25px;
+}
+
+@media (max-width: 720px) {
+  .content-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .first-content {
+    margin-bottom: 50px;
+  }
+  .app-text {
+    text-align: center;
+  }
 }
