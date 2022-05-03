@@ -11,14 +11,14 @@ export default class Controller {
 
   render() {
     this.view.inputFrom.value = 1;
-    this.view.radio1.forEach((el) => {
+    this.view.leftRadio.forEach((el) => {
       el.addEventListener("click", (event) => {
         this.model.leftValie = event.target.value;
         this.getAPI();
       });
     });
 
-    this.view.radio2.forEach((el) => {
+    this.view.rightRadio.forEach((el) => {
       el.addEventListener("click", (event) => {
         this.model.rightValue = event.target.value;
         this.getAPI();
@@ -28,13 +28,11 @@ export default class Controller {
     this.view.inputFrom.addEventListener("keyup", () => {
       this.view.inputFrom.value = this.view.inputFrom.value;
       this.view.inputIn.value = this.data * this.view.inputFrom.value;
-      this.getAPI();
     });
 
     this.view.inputIn.addEventListener("keyup", () => {
       this.view.inputIn.value = this.view.inputIn.value;
       this.view.inputFrom.value = this.view.inputIn.value * (1 / this.data);
-      this.getAPI();
     });
   }
   getAPI() {
